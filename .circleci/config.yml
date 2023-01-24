@@ -9,7 +9,7 @@ orbs:
   # Orb commands and jobs help you with common scripting around a language/tool
   # so you dont have to copy and paste it everywhere.
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/python
-  python: circleci/python@1.5.0
+  python: dialogue/python@3.8.3
   black: iac/black@2.0.0
 
 # Define a job to be invoked later in a workflow.
@@ -46,4 +46,4 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - black/check
-
+      - python/isort
